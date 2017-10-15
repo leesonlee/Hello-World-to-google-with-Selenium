@@ -1,6 +1,9 @@
 ﻿using System;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Edge;
+using OpenQA.Selenium.IE;
+using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Support.UI;
 
 namespace Hello_World
@@ -12,7 +15,10 @@ namespace Hello_World
             String searchString = "Hello World";
             Console.WriteLine(searchString);
 
-            IWebDriver driver = new ChromeDriver();
+            //IWebDriver driver = new ChromeDriver();
+            //IWebDriver driver = new EdgeDriver();
+            //IWebDriver driver = new InternetExplorerDriver();
+            IWebDriver driver = new FirefoxDriver();
 
             //Launch the ToolsQA Website
             driver.Url = "http://www.google.fr";
